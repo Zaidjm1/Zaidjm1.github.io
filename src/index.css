@@ -1,13 +1,453 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Kodchasan', sans-serif;
+  background-color: #080B0D;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ----------------------------------------------- Navbar CSS ------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #46464A;
+}
+
+.home {
+  margin-left: 20px;
+  margin-right: auto;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.home--button {
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.about {
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.contacts {
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.about:hover, .contacts:hover, .home:hover, .home--button:hover {
+  color: aqua;
+  border-bottom: 1px solid aqua;
+}
+
+/* ----------------------------------------------- Content CSS ------------------------------------------------- */
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.content--h1 {
+  font-size: 60px;
+  margin: 0;
+  color: aqua;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.content--h1::after {
+  content: "";
+  width: 5px;
+  height: 60px;
+  background: #ffffff;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+span::after {
+  content: "M";
+  animation: change 12s infinite;
+}
+
+@keyframes change {
+  1.61% {content: "M"}
+  3.22% {content: "MI"}
+  4.83% {content: "MIC"}
+  6.44% {content: "MICH"}
+  8.05% {content: "MICHA"}
+  9.66% {content: "MICHAE"}
+  11.27% {content: "MICHAEL"}
+  12.88% {content: "MICHAEL "}
+  14.49% {content: "MICHAEL J"}
+  16.1% {content: "MICHAEL JA"}
+  17.71% {content: "MICHAEL JAY"}
+  19.32% {content: "MICHAEL JAY "}
+  20.93% {content: "MICHAEL JAY O"}
+  22.54% {content: "MICHAEL JAY O."}
+  24.15% {content: "MICHAEL JAY O. "}
+  25.76% {content: "MICHAEL JAY O. D"}
+  27.37% {content: "MICHAEL JAY O. DI"}
+  28.98% {content: "MICHAEL JAY O. DIA"}
+  30.59% {content: "MICHAEL JAY O. DIAZ"}
+  32.2% {content: "MICHAEL JAY O. DIA"}
+  33.81% {content: "MICHAEL JAY O. DI"}
+  35.42% {content: "MICHAEL JAY O. D"}
+  37.03% {content: "MICHAEL JAY O. "}
+  38.64% {content: "MICHAEL JAY O."}
+  40.25% {content: "MICHAEL JAY O"}
+  41.86% {content: "MICHAEL JAY "}
+  43.47% {content: "MICHAEL JAY"}
+  45.08% {content: "MICHAEL JA"}
+  46.69% {content: "MICHAEL J"}
+  48.3% {content: "MICHAEL "}
+  49.91% {content: "MICHAEL"}
+  51.52% {content: "MICHAE"}
+  53.13% {content: "MICHA"}
+  54.74% {content: "MICH"}
+  56.35% {content: "MIC"}
+  57.96% {content: "MI"}
+  59.57% {content: "M"}
+  61.18% {content: "W"}
+  62.79% {content: "W"}
+  64.4% {content: "WE"}
+  66.01% {content: "WEB"}
+  67.62% {content: "WEB "}
+  69.23% {content: "WEB D"}
+  70.84% {content: "WEB DE"}
+  72.45% {content: "WEB DEV"}
+  74.06% {content: "WEB DEVE"}
+  75.67% {content: "WEB DEVEL"}
+  77.28% {content: "WEB DEVELO"}
+  78.89% {content: "WEB DEVELOP"}
+  80.5% {content: "WEB DEVELOPE"}
+  82.11% {content: "WEB DEVELOPER"}
+  83.72% {content: "WEB DEVELOPE"}
+  85.33% {content: "WEB DEVELO"}
+  86.94% {content: "WEB DEVEL"}
+  88.55% {content: "WEB DEVE"}
+  90.16% {content: "WEB DEV"}
+  91.77% {content: "WEB DE"}
+  93.38% {content: "WEB D"}
+  94.99% {content: "WEB "}
+  96.6% {content: "WE"}
+  98.21% {content: "W"}
+  100% {content: "M"}
+}
+
+.content--h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.content--h3 {
+  text-align: right;
+  font-size: 20px;
+  margin: 0;
+}
+
+.img-responsive {
+  height: auto;
+  max-height: 600px;
+}
+
+/* ----------------------------------------------- Card CSS ------------------------------------------------- */
+
+.cardContainer {
+  width: 90%;
+  margin: auto;
+  height: auto;
+  background-color: #2d2d72;
+  margin-bottom: 20px;
+  border-radius: 9px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cardContainer > h1 {
+  margin: 0;
+  color: white;
+  padding: 20px;
+  border-bottom: 1px solid rgb(73, 73, 73);
+}
+
+.card--manhwa {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  height: auto;
+}
+
+.card--img {
+  margin: 20px;
+  height: 400px;
+  max-height: 400px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.card--name {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.card--lists {
+  display: flex;
+  overflow: auto;
+}
+
+.about--page {
+  color: white;
+}
+
+/* ----------------------------------------------- About CSS [TOP PART] ------------------------------------------------- */
+
+.card_container {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  margin-top: 100px;
+  height: 600px;
+  color: white;
+}
+
+.first {
+  margin-left: auto;
+  border-radius: 0;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-left: 1px solid black;
+  width: 25%;
+  align-items: center;
+  background-color: #202027;
+}
+
+.second {
+  margin-right: auto;
+  border-radius: 0;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border: 0;
+  width: 50%;
+  background-color: #2d2d72;
+}
+
+.profile_image {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #46464A;
+  border-radius: 9px;
+}
+
+.card_name {
+  padding-top: 10px;
+}
+
+.card_name, .card_prof {
+  margin: 0;
+}
+
+.card_skills {
+  margin-top: 30px;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  background-color: #252323;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills {
+  text-align: center;
+  padding: 8px;
+}
+
+.card_about {
+  font-size: 30px;
+  padding: 20px;
+}
+
+.second > p {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+/* ----------------------------------------------- About CSS [BOTTOM PART] ------------------------------------------------- */
+
+.text {
+  margin-top: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.card_showskill {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.showskill {
+  margin-bottom: 100px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+}
+
+.html {
+  margin-left: auto;
+}
+
+.reactjs {
+  margin-right: auto;
+}
+
+.logo {
+  margin: auto;
+  filter: grayscale(100%);
+}
+
+/* ----------------------------------------------- Contact CSS ------------------------------------------------- */
+
+
+
+/* ----------------------------------------------- Screen width Config ------------------------------------------------- */
+
+@media only screen and (max-width: 1700px) {
+  .content {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 1499px) {
+  .content {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 400px;
+    gap: 20px;
+  }
+  
+  .intro {
+    text-align: center;
+    color: white;
+    padding-bottom: 60px;
+    margin: auto;
+    gap: 10px;
+  }
+  
+  .content--h1 {
+    font-size: 40px;
+  }
+
+  .content--h1::after {
+    height: 40px;
+  }
+
+  .content--h2 {
+    font-size: 30px;
+  }
+  
+  .content--h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .img-responsive {
+    height: auto;
+    max-height: 600px;
+  }
+  
+}
+
+@media only screen and (max-width: 462px) {
+
+  .content--h1 {
+    font-size: 25px;
+  }
+
+  .content--h1::after {
+    height: 25px;
+  }
+
+  .content--h2 {
+    font-size: 20px;
+  }
+  
+  .content--h3 {
+    font-size: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 400px){
+  .home {
+    font-size: 20px;
+  }
+
+  .contacts {
+    font-size: 15px;
+  }
+
+  .about {
+    font-size: 15px;
+  }
+
+  .card_container p, li {
+    font-size: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 900px){
+  .card_container {
+    flex-direction: column;
+  }
+
+  .first, .second {
+    margin: auto;
+    width: 80%;
+    border-radius: 0;
+    border: 0;
+  }
+
+  .first {
+    margin-top: 100px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+
+  .second {
+    margin-bottom: 100px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+
 }
